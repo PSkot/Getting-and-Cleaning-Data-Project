@@ -2,7 +2,7 @@
 Repo for the "Getting and Cleaning Data" course project
 
 ## Script
-This repo contains a single script "run_analysis.R". The code may also be found below:
+This repo contains a single script "run_analysis.R". The code may also be found below (short description of the script is found below the script):
 
 ```{r eval=FALSE}
 
