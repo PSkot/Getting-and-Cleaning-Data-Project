@@ -13,23 +13,23 @@ library(data.table)
 library(rlang)
 
 #Set working directory
-wd <- "C:/Users/Peter.skot/Desktop"
+wd <- "C:\\Users\\PC\\Dropbox\\Programming\\Data Science course\\WD"
 setwd(wd)
 
 #Read subjects, features and activity labels
-subjects_train <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt", sep="", stringsAsFactors = F)
-subjects_test <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt", sep="", stringsAsFactors = F)
-features <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/features.txt", sep="", stringsAsFactors = F)[,2]
-activity_labels <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/activity_labels.txt", sep="", stringsAsFactors = F)
+subjects_train <- read.table("./UCI HAR Dataset/train/subject_train.txt", sep="", stringsAsFactors = F)
+subjects_test <- read.table("./UCI HAR Dataset/test/subject_test.txt", sep="", stringsAsFactors = F)
+features <- read.table("./UCI HAR Dataset/features.txt", sep="", stringsAsFactors = F)[,2]
+activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt", sep="", stringsAsFactors = F)
 
 #Read and combine training sets
-train_x <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/train/X_train.txt", sep="", stringsAsFactors = F)
-train_y <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/train/y_train.txt")
+train_x <- read.table("./UCI HAR Dataset/train/X_train.txt", sep="", stringsAsFactors = F)
+train_y <- read.table("./UCI HAR Dataset/train/y_train.txt")
 train <- cbind(subjects_train,train_y,train_x)
 
 #Read and combine test sets
-test_x <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/test/X_test.txt", sep="", stringsAsFactors = F)
-test_y <- read.table("./getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/test/y_test.txt")
+test_x <- read.table("./UCI HAR Dataset/test/X_test.txt", sep="", stringsAsFactors = F)
+test_y <- read.table("./UCI HAR Dataset/test/y_test.txt")
 test <- cbind(subjects_test,test_y,test_x)
 
 #Name sets
